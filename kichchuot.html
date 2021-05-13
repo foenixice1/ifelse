@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kích Chuột</title>
+</head>
+<body>
+ <form>
+     <img id="anh1" src="https://cf.shopee.vn/file/116e3346b7d34d3aee1bd015bf555cb3" style="width: 400px"/>
+     <p>Click button below to move the image to right</p>
+     <input type="button" value="Click Me" onclick="moveRight()">
+ </form>
+<script>
+    let anh = null ;
+     anh = document.getElementById("anh1");
+    function init() {
+        anh = document.getElementById("anh1");
+        anh.style.position = 'relative';
+        anh.style.left = '0px';
+    }
+    function moveRight() {
+        anh.style.left = parseInt(anh.style.left) + 10  + 'px';
+    }
+    window.onload = init;
+</script>
+
+</body>
+</html>
