@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Lên xuống</title>
 </head>
-<body>
-$END$
+<body onload="docReady()">
+<img id="anh" src="https://i.pinimg.com/originals/39/63/56/39635620bc39fd89280af66645b69d80.gif" style="position:absolute;left:0; top:0;" width="300px"/>
+<script>
+  function len1() {
+      let element = document.getElementById("anh");
+      element.style.top = parseInt(element.style.top) - 10 + 'px';
+  }
+  function xuong1() {
+      let element = document.getElementById("anh");
+      element.style.top = parseInt(element.style.top) + 10 + 'px';
+  }
+  function trai1() {
+      let element = document.getElementById("anh");
+      element.style.left = parseInt(element.style.left) - 10 + 'px';
+  }
+  function phai1() {
+      let element = document.getElementById("anh");
+      element.style.left = parseInt(element.style.left) + 10 + 'px';
+  }
+  function moveSelection(evt) {
+      switch (evt.keyCode) {
+          case 37:
+              trai1();
+              break;
+          case 39:
+              phai1();
+              break;
+          case 38:
+              len1();
+              break;
+          case 40:
+              xuong1();
+              break;
+      }
+  }
+  function docReady() {
+      window.addEventListener('keydown' , moveSelection);
+  }
+
+
+
+
+
+
+</script>
+
 </body>
 </html>
