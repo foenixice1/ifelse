@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày của tháng</title>
+</head>
+<body>
+<input id="nhapthang" type="text">
+<input type="button" value="Tính số ngày" onclick="an()">
+<script>
+
+  function an() {
+      let nhapthang = +document.getElementById("nhapthang").value;
+      switch (nhapthang) {
+          case (1):
+          case (3):
+          case (5):
+          case (7):
+          case (8):
+          case (10):
+          case (12):
+              document.getElementById("hienthi").innerHTML=' Tháng ' + nhapthang + ' có 31 ngày';
+              break;
+          case (4):
+          case (6):
+          case (9):
+          case (11):
+              document.getElementById('hienthi').innerHTML=' Tháng ' + nhapthang + ' có 30 ngày';
+              break;
+          case (2):
+              document.getElementById("hienthi").innerHTML= ' Tháng ' + nhapthang + ' có 28 hoặc 29 ngày';
+              break;
+          default:
+              document.getElementById("hienthi").innerHTML='Không có tháng đó trong năm';
+      }
+  }
+
+</script>
+<p id="hienthi"></p>
+</body>
+</html>
